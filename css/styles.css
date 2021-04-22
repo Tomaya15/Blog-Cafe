@@ -1,0 +1,269 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem es igual a 10px */
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 0;
+}
+h1, h2, h3, h4{
+    font-family: 'PT Sans', sans-serif;
+}
+h1{ 
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+    line-height: 5rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+/* SELECTORES GLOBALES */
+
+.contendor{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* UTILIDADES */
+.centrar-texto{
+    text-align: center;
+}
+.no-margin{
+    margin: 0;
+}
+@media (min-width: 768px) {
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas{
+        justify-content: center;
+    }
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 1rem)
+    }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);   
+    }
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12{
+        flex: 0 0 100%;
+    }
+}
+
+.boton{
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.boton-primario{
+    background-color: black;
+    
+}
+.boton-secundario{
+    background-color: #784d3c;
+} 
+/* HEADER */
+
+.site-header{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+    margin-bottom: 5rem;
+}   
+.site-header a{
+    color: white;
+    text-decoration: none;
+}
+.site-header h1{
+    text-align: center;
+    font-weight: 400;
+}
+.site-header span{
+    font-weight: 700;
+}
+/* header navegacion*/
+.navegacion a{
+    text-align: center;
+    font-size: 1.8rem;
+    display: block;
+    color: #FFFFFF;
+}
+@media (min-width:768px) {
+    .navegacion a{
+        display: inline;
+        margin-right: 2rem;
+    }
+    .navegacion :last-of-type{
+        margin-right: 0;
+    }
+}
+/* header texto */
+
+.header-texto{
+    color: white;
+    text-align: center;
+    margin-top: 15rem;
+}
+.header-texto p{
+    font-size: 2rem;
+}
+
+/* Contenido principal HOME */
+
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog, 
+.cursos{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+.cursos{
+    order: -1; /* Para mandar los cursos arriba de todo */  
+}
+@media (min-width: 768px) {
+    .contenido-principal {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .blog{
+        flex-basis: 66.6%;
+        order: -1 /* Para mandar el blog a la izquierda */;
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 4rem);
+    }
+}
+
+/* Blog */
+
+.blog-article{
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.blog-article:last-of-type{
+    border-bottom: 0px;
+    margin-bottom: 0;
+}
+.blog h2{
+    margin-bottom: 2rem
+}
+
+/* .blog-article{ PARA LAS IMAGENES AL LADO DEL TEXTO !!
+    display: flex;
+    justify-content: space-between;
+}
+.blog-article .imagen{
+    flex: 0 0 40%;
+}
+.blog-article .article-contenido{
+    flex: 0 0 calc(60% - 2rem) ;
+} */
+
+/* Cursos */
+
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+}
+.curso{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 3rem;
+}
+.curso:last-of-type{
+    border-bottom: none;
+}
+.curso p{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+.curso p span{
+    font-weight: 400;
+}
+.curso h4{
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+
+.site-footer{
+    background-color: black;
+    margin-top: 4rem;
+    padding: 2rem 3rem;
+}
+
+.site-footer p{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Open Sans',sans-serif;
+    text-align: center;   
+}
+
+.site-footer p span{
+    font-weight: 700;
+}
+
+/* Pagina curso */
+
+.curso p.descripcion{  /* Para darle mas peso le agrregas la etiqueta p  */
+    font-weight: 400; 
+}
+
+/* Pagina contacto */
+.formulario-contacto{
+    background-color: #FFFFFF;
+    padding: 5rem;
+}
+
+
+@media (min-width: 768px) {
+    .formulario-contacto{
+        margin-top: -10rem;
+    }
+}
